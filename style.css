@@ -1,0 +1,127 @@
+:root {
+  --principal: #224459;
+  --fundo: #eaeaeb;
+  --texto: hsl(221, 95%, 8%);
+  --fundo2: #f2f2f2;
+  --segunda: #173040;
+}
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: var(--fundo);
+  color: var(--principal);
+  border-bottom: 1px solid rgba(30, 45, 59, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--principal);
+}
+.logo {
+  margin-left: 10px;
+}
+.logo img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.busca {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+.busca input {
+  padding: 15px;
+  width: 400px;
+  border: 0px solid var(--principal);
+  border-bottom: 1px solid var(--principal);
+  background-color: var(--fundo);
+  color: var(--principal);
+}
+.busca input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--principal);
+  font-size: 20px;
+}
+.busca input::placeholder {
+  color: var(--principal);
+  font-size: 20px;
+}
+.busca img {
+  width: 50px;
+  height: 50px;
+}
+.busca img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+.menu button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 0px solid var(--principal);
+  background-color: var(--fundo);
+  color: var(--principal);
+  cursor: pointer;
+}
+.menu button:hover {
+  border-bottom: 2px solid var(--principal);
+  color: var(--principal);
+  border-radius: 0%;
+}
+
+main {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: var(--fundo2);
+  color: var(--principal);
+  height: 100vh;
+  overflow: auto;
+}
+.texto-banner {
+  margin-top: 30px;
+  text-align: center;
+}
+.banner {
+  margin-top: 10px;
+  text-align: center;
+}
+.banner img {
+  width: 80%;
+  border-radius: 15px;
+}
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--principal), var(--segunda));
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: var(--principal);
+  color: var(--fundo);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}

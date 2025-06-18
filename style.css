@@ -7,8 +7,13 @@
 }
 html {
   transition: font-size 0.3s ease;
+  height: 100%; /* Garantir que o body e o html ocupem toda a altura da tela */
+  margin: 0; /* Remover margens padrões */
+  padding: 0; /* Remover padding padrões */
 }
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--fundo);
   color: var(--texto);
   margin: 0;
@@ -74,6 +79,10 @@ h1 {
   align-items: center;
   margin-left: 10%;
 }
+.busca button {
+  border: none;
+  background: none;
+}
 .busca input {
   padding: 15px;
   width: 400px;
@@ -128,7 +137,7 @@ main {
   margin-right: 5%;
   background-color: var(--fundo2);
   color: var(--principal);
-  overflow: auto;
+  flex: 1;
 }
 .texto-banner {
   margin-top: 30px;
@@ -343,6 +352,7 @@ body.dark-mode .card:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 30px;
 }
 .card {
@@ -387,4 +397,121 @@ body.dark-mode .card:hover {
 }
 .card p {
   font-weight: bold;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 0 solid var(--principal);
+  border-bottom: 1px solid var(--principal);
+  background-color: var(--fundo);
+  color: var(--principal);
+  border-radius: 4px;
+  transition: border-bottom-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder {
+  color: var(--principal);
+  opacity: 0.7;
+  transition: color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--principal);
+  transform: scale(1.02);
+}
+
+.form-group button {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: var(--principal);
+  color: var(--fundo);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group button:hover,
+.form-group button:focus {
+  background-color: var(--segunda);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group option {
+  color: var(--principal);
+  font-size: 20px;
+}
+.form-group label {
+  color: var(--principal);
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+/* Media query para tablets (até 1024px de largura) */
+@media (max-width: 1024px) {
+  header {
+    padding: 8px 15px;
+    height: 60px; /* Header compacto */
+    flex-direction: row;
+    align-items: center;
+  }
+  header h1 {
+    display: none;
+  }
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+  .busca input {
+    width: 80%;
+    padding: 8px;
+  }
+  .menu button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+/* Media query para celulares (até 768px de largura) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 5px;
+    height: auto;
+  }
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .menu button {
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 90%;
+    margin: 5px 0;
+  }
+  .busca input {
+    width: 90%;
+    padding: 8px;
+  }
 }

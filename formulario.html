@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highway Motors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
+      <h1>Highway Motors</h1>
+      <div class="busca">
+        <button onclick="buscarCarro()" aria-label="Buscar">
+          <img src="img/busca.png" alt="Ícone de busca" />
+        </button>
+        <input id="busca" type="text" placeholder="Pesquise pelo modelo" />
+      </div>
+
+      <div class="menu">
+        <a href="index.html">
+          <button>Comprar Carro</button>
+        </a>
+        <button onclick="erro()">Vender Meu Carro</button>
+      </div>
+      <div class="opcoes">
+        <img src="img/menu.png" alt="Menu" id="menu-icon" />
+        <ul class="dropdown">
+          <li>
+            <button onclick="toggleAcessibilidade()" id="acessibilidade-btn">
+              Acessibilidade
+            </button>
+          </li>
+          <li>
+            <button onclick="toggleDarkMode()" id="tema-btn">
+              Modo Noturno
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="fixados">
+        <img src="img/zap.png" alt="zap" style="margin-bottom: 30px" />
+        <img src="img/instagram.png" alt="instagram" />
+      </div>
+      <form>
+        <h2 class="title"><span>Informações do Veículo</span></h2>
+        <div class="form-group">
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" name="modelo" required />
+        </div>
+        <div class="form-group">
+          <label for="ano">Ano:</label>
+          <input type="number" id="ano" name="ano" required />
+        </div>
+        <div class="form-group">
+          <label for="cambio">Câmbio:</label>
+          <select id="cambio" name="cambio" required>
+            <option value="">Selecione</option>
+            <option value="Manual">Manual</option>
+            <option value="Automático">Automático</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="kilometragem">Kilometragem:</label>
+          <input type="number" id="kilometragem" name="kilometragem" required />
+        </div>
+        <div class="form-group">
+          <label for="combustivel">Combustível:</label>
+          <select id="combustivel" name="combustivel" required>
+            <option value="">Selecione</option>
+            <option value="Gasolina">Gasolina</option>
+            <option value="Flex">Flex</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preco">Preço:</label>
+          <input type="number" id="preco" name="preco" required />
+          <button onclick="enviarFormulario()" type="submit">Enviar</button>
+        </div>
+      </form>
+      <hr />
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Highway Motors. Todos os direitos reservados.</p>
+      <ul class="info">
+        <li>Contato</li>
+        <li>Anunciar</li>
+        <li>Carros</li>
+        <li>Empresa</li>
+      </ul>
+    </footer>
+  </body>
+</html>

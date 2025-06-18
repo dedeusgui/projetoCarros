@@ -422,7 +422,23 @@ body.dark-mode .card:hover {
   transition: border-bottom-color 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease, transform 0.2s ease;
 }
+.form-group input:invalid {
+  border-color: #e53e3e; /* Vermelho */
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
 
+/* Estiliza o input quando ele está com dados válidos */
+.form-group input:valid {
+  border-color: #48bb78; /* Verde */
+}
+.form-group select:invalid {
+  border-color: #e53e3e; /* Vermelho */
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
+
+.form-group select:valid {
+  border-color: #48bb78; /* Verde */
+}
 .form-group input::placeholder,
 .form-group select::placeholder {
   color: var(--principal);
